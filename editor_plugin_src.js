@@ -32,8 +32,8 @@
       ed.addCommand('mceJwPlayer', function() {
         ed.windowManager.open({
           file : url + '/dialog.htm',
-          width : 250 + parseInt(ed.getLang('jwplayer.delta_width', 0)),
-          height : 280 + parseInt(ed.getLang('jwplayer.delta_height', 0)),
+          width :270 + parseInt(ed.getLang('jwplayer.delta_width', 0)),
+          height : 300 + parseInt(ed.getLang('jwplayer.delta_height', 0)),
           inline : 1
         }, {
           plugin_url : url, // Plugin absolute URL
@@ -232,6 +232,8 @@
       +"    'flashplayer': '"+ jwplayer_url+ "/player.swf',"
       +"    'controlbar': '"+ data.controlbar+ "',"
       + extra
+      +"    'image': '"+ data.imagefile+ "',"
+      +"    'stretching': '"+ data.stretching+ "',"
       +"    'width': '"+ data.width+ "',"
       +"    'height': '"+ data.height+ "'"
       +"  });";

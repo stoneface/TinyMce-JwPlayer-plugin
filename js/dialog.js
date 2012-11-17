@@ -25,6 +25,9 @@ var JwPlayerDialog = {
       // get the values in the input hidden field
       var values = tinymce.util.JSON.parse(dom.getAttrib(n, 'data-mce-json'));
       f.file.value          = values.file;
+	  f.imagefile.value     = values.imagefile;
+	  f.stretching.value    = values.stretching;
+//	  f.skin.value   		= values.skin;
       f.width.value         = dom.getAttrib(n, 'width');
       f.height.value        = dom.getAttrib(n, 'height');
       f.controlbar.value    = values.controlbar;
@@ -34,6 +37,9 @@ var JwPlayerDialog = {
     }
     else {
       f.file.value          = tinyMCEPopup.getWindowArg('file', '');
+	  f.imagefile.value     = tinyMCEPopup.getWindowArg('imagefile', '');
+	  f.stretching.value    = tinyMCEPopup.getWindowArg('stretching', 'fill');
+//	  f.skin.value    	    = tinyMCEPopup.getWindowArg('skin', '');
       f.width.value         = tinyMCEPopup.getWindowArg('width', '320');
       f.height.value        = tinyMCEPopup.getWindowArg('height', '240');
       f.controlbar.value    = tinyMCEPopup.getWindowArg('controlbar', 'bottom');
@@ -76,6 +82,9 @@ var JwPlayerDialog = {
     var data = tinymce.util.JSON.serialize({
       'id'            : id,
       'file'          : nl.file.value,
+	  'imagefile'     : nl.imagefile.value,
+	  'stretching'    : nl.stretching.value,
+//	  'skin'    	  : nl.skin.value,
       'width'         : nl.width.value,
       'height'        : nl.height.value,
       'controlbar'    : nl.controlbar.value,
